@@ -1,0 +1,3277 @@
+{
+  "modules": [
+    {
+      "name": "base",
+      "chnname": "系统基础",
+      "entities": [
+        {
+          "title": "base_define",
+          "fields": [
+            {
+              "name": "module",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "模块名称",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "code_type_name",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "代码定义名称",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "code_value",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "代码取值"
+            },
+            {
+              "name": "code_name",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "代码取值中文名"
+            },
+            {
+              "name": "code_desc",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "代码的详细描述"
+            },
+            {
+              "name": "op_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "操作员"
+            },
+            {
+              "name": "state",
+              "type": "Integer",
+              "remark": "0-无效，1有效",
+              "chnname": "代码状态"
+            },
+            {
+              "name": "sort_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "排序ID"
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "基础定义表"
+        }
+      ],
+      "graphCanvas": {
+        "nodes": [],
+        "edges": []
+      },
+      "associations": []
+    },
+    {
+      "name": "admin",
+      "chnname": "系统管理",
+      "entities": [
+        {
+          "title": "sys_user",
+          "fields": [
+            {
+              "name": "op_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "系统用户ID",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "op_name",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "系统用户名",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "op_real_name",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "系统用户实名",
+              "pk": false,
+              "notNull": false
+            },
+            {
+              "name": "op_nick_name",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "系统用户昵称"
+            },
+            {
+              "name": "op_passwd",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "系统用户密码"
+            },
+            {
+              "name": "state",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "系统用户状态"
+            },
+            {
+              "name": "op_phone",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "系统用户电话"
+            },
+            {
+              "name": "op_email",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "系统用不邮箱"
+            },
+            {
+              "name": "org_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "归属组织"
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "记录创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "记录修改时间"
+            },
+            {
+              "name": "sys_seq_nbr",
+              "type": "BigInt",
+              "remark": "",
+              "chnname": "系统流水号"
+            },
+            {
+              "name": "reamark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "系统用户"
+        },
+        {
+          "title": "sys_role",
+          "fields": [
+            {
+              "name": "role_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "角色ID",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "role_name",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "角色名称",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "state",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "角色状态"
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "sys_seq_nbr",
+              "type": "BigInt",
+              "remark": "",
+              "chnname": "系统流水号"
+            },
+            {
+              "name": "remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "系统角色"
+        },
+        {
+          "title": "sys_menu_priv",
+          "fields": [
+            {
+              "name": "menu_id",
+              "type": "Integer",
+              "remark": "菜单ID即控制权限ID",
+              "chnname": "菜单ID",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "menu_name",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "菜单名称",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "state",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "菜单状态"
+            },
+            {
+              "name": "parent_menu_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "父菜单ID",
+              "pk": false,
+              "notNull": false
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "sys_seq_nbr",
+              "type": "BigInt",
+              "remark": "",
+              "chnname": "系统流水号"
+            },
+            {
+              "name": "remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "系统菜单和权限"
+        },
+        {
+          "title": "sys_user_role",
+          "fields": [
+            {
+              "name": "op_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "操作员"
+            },
+            {
+              "name": "role_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "操作员角色"
+            },
+            {
+              "name": "state",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "记录状态"
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "sys_seq_nbr",
+              "type": "BigInt",
+              "remark": "",
+              "chnname": "系统流水号"
+            },
+            {
+              "name": "remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "系统用户角色"
+        },
+        {
+          "title": "sys_role_menu",
+          "fields": [
+            {
+              "name": "op_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "角色ID",
+              "notNull": true,
+              "pk": false
+            },
+            {
+              "name": "menu_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "菜单ID",
+              "notNull": false
+            },
+            {
+              "name": "state",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "记录状态"
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "create_opId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "sys_seq_nbr",
+              "type": "BigInt",
+              "remark": "",
+              "chnname": "系统流水号"
+            },
+            {
+              "name": "remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "系统角色菜单"
+        },
+        {
+          "title": "sys_org",
+          "fields": [
+            {
+              "name": "org_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "组织ID",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "org_name",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "组织名称"
+            },
+            {
+              "name": "parent_org_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "组织父ID"
+            },
+            {
+              "name": "state",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "记录状态"
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "op_Id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "sys_seq_nbr",
+              "type": "BigInt",
+              "remark": "",
+              "chnname": "系统流水号"
+            },
+            {
+              "name": "remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "系统组织表"
+        }
+      ],
+      "graphCanvas": {
+        "nodes": [
+          {
+            "shape": "table",
+            "title": "sys_user",
+            "moduleName": false,
+            "x": 360,
+            "y": 310,
+            "id": "ce0b5a9e"
+          },
+          {
+            "shape": "table",
+            "title": "sys_org",
+            "moduleName": false,
+            "x": -40,
+            "y": 60,
+            "id": "33e6c007"
+          },
+          {
+            "shape": "table",
+            "title": "sys_user_role",
+            "moduleName": false,
+            "x": 430,
+            "y": 0,
+            "id": "52609065"
+          },
+          {
+            "shape": "table",
+            "title": "sys_role",
+            "moduleName": false,
+            "x": 840,
+            "y": 20,
+            "id": "3f5170d6"
+          },
+          {
+            "shape": "table",
+            "title": "sys_role_menu:1",
+            "moduleName": false,
+            "x": 860,
+            "y": 290,
+            "id": "da5bd9ba"
+          },
+          {
+            "shape": "table",
+            "title": "sys_menu_priv",
+            "moduleName": false,
+            "x": 710,
+            "y": 570,
+            "id": "4f66e32f"
+          }
+        ],
+        "edges": []
+      },
+      "associations": []
+    },
+    {
+      "name": "duty",
+      "chnname": "值日管理",
+      "entities": [
+        {
+          "title": "duty_report",
+          "fields": [
+            {
+              "name": "duty_date",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "值日日期"
+            },
+            {
+              "name": "report_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "值班报告ID号",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "op_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "值班人"
+            },
+            {
+              "name": "report_state",
+              "type": "Integer",
+              "remark": "0-关闭，1-打开",
+              "chnname": "报告单状态"
+            },
+            {
+              "name": "report_desc",
+              "type": "LongText",
+              "remark": "",
+              "chnname": "值班报告描述"
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "sys_seq_nbr",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "系统流水号"
+            },
+            {
+              "name": "remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "值日报告",
+          "remark": "记录每天工作记录，按年分表。"
+        },
+        {
+          "title": "duty_event",
+          "fields": [
+            {
+              "name": "event_id",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "事件单ID号",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "report_id",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "报告单ID号"
+            },
+            {
+              "name": "op_id",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "填报人"
+            },
+            {
+              "name": "event_state",
+              "type": "Integer",
+              "remark": "0-打开，1-关闭",
+              "chnname": "事件状态"
+            },
+            {
+              "name": "event_type",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "事件分类"
+            },
+            {
+              "name": "start_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "报障时间"
+            },
+            {
+              "name": "event_man",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "报障人"
+            },
+            {
+              "name": "event_phone",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "报障人电话"
+            },
+            {
+              "name": "event_desc",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "事件描述"
+            },
+            {
+              "name": "event_deal_desc",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "事件处理"
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "sys_seq_nbr",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "系统流水号"
+            },
+            {
+              "name": "remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "值班事件",
+          "remark": "记录每天的工作事件记录，按年分表。"
+        },
+        {
+          "title": "duty_fault",
+          "fields": [
+            {
+              "name": "fault_id",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "故障单ID号",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "event_id",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "事件单ID号"
+            },
+            {
+              "name": "report_id",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "报告单ID号"
+            },
+            {
+              "name": "op_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "填报人"
+            },
+            {
+              "name": "fault_state",
+              "type": "Integer",
+              "remark": "0-关闭，1-打开",
+              "chnname": "故障状态",
+              "pk": false,
+              "notNull": false
+            },
+            {
+              "name": "fault_type",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "故障类型"
+            },
+            {
+              "name": "fault_grade",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "故障等级"
+            },
+            {
+              "name": "is_fault",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "是否故障"
+            },
+            {
+              "name": "start_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "报障时间"
+            },
+            {
+              "name": "fault_desc",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "事件描述"
+            },
+            {
+              "name": "fault_deal_desc",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "事件处理"
+            },
+            {
+              "name": "create_date",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "sys_seq_nbr",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "系统流水号"
+            },
+            {
+              "name": "remark",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "值班故障",
+          "remark": "记录每天的工作事件记录，按年分表。"
+        }
+      ],
+      "graphCanvas": {
+        "nodes": [
+          {
+            "shape": "table",
+            "title": "duty_report:1",
+            "moduleName": false,
+            "x": 620,
+            "y": 50,
+            "id": "782e91c2"
+          },
+          {
+            "shape": "table",
+            "title": "duty_report",
+            "moduleName": false,
+            "x": 200,
+            "y": 120,
+            "id": "2de453f2"
+          },
+          {
+            "shape": "table",
+            "title": "duty_fault",
+            "moduleName": false,
+            "x": 620,
+            "y": 390,
+            "id": "9b2e3458"
+          }
+        ],
+        "edges": []
+      },
+      "associations": []
+    },
+    {
+      "name": "task",
+      "chnname": "绩效管理",
+      "entities": [],
+      "graphCanvas": {
+        "nodes": [],
+        "edges": []
+      },
+      "associations": []
+    },
+    {
+      "name": "assess",
+      "chnname": "能力评估",
+      "entities": [
+        {
+          "title": "as_abi_action",
+          "chnname": "执行能力",
+          "fields": [
+            {
+              "name": "staff_id",
+              "type": "INT_10",
+              "chnname": "员工编号",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "check_date",
+              "type": "Date",
+              "remark": "",
+              "chnname": "检查日期"
+            },
+            {
+              "name": "key_error_A2",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "关键差错A2"
+            },
+            {
+              "name": "key_error_A4",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "关键差错A4"
+            },
+            {
+              "name": "key_error_A6",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "关键差错A6"
+            },
+            {
+              "name": "key_error_A7",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "关键差错A7"
+            },
+            {
+              "name": "key_error_A8",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "关键差错A8"
+            },
+            {
+              "name": "no_key_error",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "非关键差错"
+            },
+            {
+              "name": "customer_3point",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "客户评价3分"
+            },
+            {
+              "name": "call_test",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "拨测"
+            },
+            {
+              "name": "one_veto",
+              "type": "Double",
+              "remark": "",
+              "chnname": "一票否决"
+            },
+            {
+              "name": "inter_rate",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "拦截率"
+            },
+            {
+              "name": "violate_operation",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "违规操作"
+            },
+            {
+              "name": "priv_open_busi",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "私开"
+            },
+            {
+              "name": "online_exam_b",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "机器上线考核B差"
+            },
+            {
+              "name": "good_speech_study",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "优秀话术学习情况"
+            },
+            {
+              "name": "good_speech_studio",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "优秀话术高分录音"
+            },
+            {
+              "name": "good_speech_use",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "优秀话术运用"
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ]
+        },
+        {
+          "title": "as_abi_konw_exam",
+          "chnname": "知识能力考试",
+          "fields": [
+            {
+              "name": "staff_id",
+              "type": "VARCHAR_32",
+              "chnname": "员工编号",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "exam_date",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "考试日期"
+            },
+            {
+              "name": "score",
+              "type": "DECIMAL_32_10",
+              "chnname": "考试分数",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "exam_model",
+              "type": "VARCHAR_32",
+              "chnname": "考试模式",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ]
+        },
+        {
+          "title": "as_abi_konw_other",
+          "chnname": "知识能力其它",
+          "fields": [
+            {
+              "name": "staff_id",
+              "type": "VARCHAR_32",
+              "chnname": "员工编号",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "check_date",
+              "type": "DATE",
+              "chnname": "检查日期",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "score",
+              "type": "DECIMAL_32_10",
+              "chnname": "培训考试",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "exam_model",
+              "type": "VARCHAR_32",
+              "chnname": "机器复核A差",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "key_error_A1",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "关键差错A1"
+            },
+            {
+              "name": "key_error_A3",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "关键差错A3"
+            },
+            {
+              "name": "explain_not_pass",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "申诉未通过"
+            },
+            {
+              "name": "repeat_explain",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "重复申诉"
+            },
+            {
+              "name": "extern_call_repair",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "外呼补救量"
+            },
+            {
+              "name": "return_fee_rate",
+              "type": "Double",
+              "remark": "",
+              "chnname": "退费准确率"
+            },
+            {
+              "name": "recover_error",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "纠错量"
+            },
+            {
+              "name": "repeat_call_rate",
+              "type": "Double",
+              "remark": "",
+              "chnname": "重复投诉率"
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ]
+        },
+        {
+          "title": "as_abi_incall",
+          "chnname": "接听话务能力",
+          "fields": [
+            {
+              "name": "staff_id",
+              "type": "VARCHAR_32",
+              "chnname": "员工编号",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "static_month",
+              "type": "VARCHAR_32",
+              "chnname": "统计月份",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "untitled3",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "接听量"
+            },
+            {
+              "name": "sign_call_time",
+              "type": "DECIMAL_32_10",
+              "chnname": "签入时长",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "hour_call_num",
+              "type": "INT_10",
+              "chnname": "小时接听量",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "ave_all_time",
+              "type": "DECIMAL_32_10",
+              "chnname": "平均通话时长",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "busi_time",
+              "type": "DECIMAL_32_10",
+              "chnname": "示忙时长",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "clean_time",
+              "type": "DECIMAL_32_10",
+              "chnname": "整理时长",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "month_work_time",
+              "type": "DECIMAL_32_10",
+              "chnname": "月工作时长",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "satisfy_rate",
+              "type": "DECIMAL_32_10",
+              "chnname": "满意率",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "solve_rate",
+              "type": "DECIMAL_32_10",
+              "chnname": "解决率",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "check_on",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "考勤"
+            },
+            {
+              "name": "on_duty_rate",
+              "type": "Double",
+              "remark": "",
+              "chnname": "出勤率"
+            },
+            {
+              "name": "work_order_rate",
+              "type": "Ratio",
+              "remark": "",
+              "chnname": "排班遵守率"
+            },
+            {
+              "name": "work_days",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "当月上班天数"
+            },
+            {
+              "name": "praise_num",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "表扬"
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "untitled2",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ]
+        },
+        {
+          "title": "as_abi_backcall",
+          "chnname": "后台话务能力",
+          "fields": [
+            {
+              "name": "staff_id",
+              "type": "VARCHAR_32",
+              "chnname": "员工编号",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "static_month",
+              "type": "VARCHAR_32",
+              "chnname": "统计月份",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "call_package_gift",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "话费包赠送"
+            },
+            {
+              "name": "betime_rate",
+              "type": "Ratio",
+              "remark": "",
+              "chnname": "及时处理率"
+            },
+            {
+              "name": "overtime_rate",
+              "type": "Ratio",
+              "remark": "",
+              "chnname": "超时处理率"
+            },
+            {
+              "name": "call_10086_num",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "10086呼出通话量"
+            },
+            {
+              "name": "call_succ_time",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "成功外呼时长"
+            },
+            {
+              "name": "one_slove_rate",
+              "type": "Ratio",
+              "remark": "",
+              "chnname": "工单一次性解决率"
+            },
+            {
+              "name": "crate_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ]
+        },
+        {
+          "title": "as_abi_sale",
+          "chnname": "销售能力",
+          "fields": [
+            {
+              "name": "staff_id",
+              "type": "VARCHAR_32",
+              "chnname": "员工编号",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "sale_month",
+              "type": "DATE",
+              "chnname": "销售月份",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "sp_num",
+              "type": "INT_10",
+              "chnname": "增值业务办理量",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "broadbrand_sale_num",
+              "type": "INT_10",
+              "chnname": "宽带推荐量",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "sale_4g_num",
+              "type": "INT_10",
+              "chnname": "4G迁移低转高量",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "phone_sale_num",
+              "type": "INT_10",
+              "chnname": "终端销售量",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "flow_sale_num",
+              "type": "INT_10",
+              "chnname": "流量套餐受理量",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "markting_score",
+              "type": "INT_10",
+              "chnname": "营销积分",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ]
+        },
+        {
+          "title": "as_abi_incall_slove",
+          "chnname": "呼入投诉处理能力",
+          "fields": [
+            {
+              "name": "staff_id",
+              "type": "VARCHAR_32",
+              "chnname": "员工编号",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "static_month",
+              "type": "VARCHAR_32",
+              "chnname": "统计时间",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "order_num",
+              "type": "VARCHAR_32",
+              "chnname": "填单量",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "error_order_num",
+              "type": "VARCHAR_32",
+              "chnname": "差错工单",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "hard_order_num",
+              "type": "DATETIME",
+              "chnname": "转接疑难专席量",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "ivr_order_num",
+              "type": "VARCHAR_32",
+              "chnname": "转接IVR量",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "recall_order_num",
+              "type": "DATETIME",
+              "chnname": "重复来电量",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "customer_4point",
+              "type": "VARCHAR_32",
+              "chnname": "客户评价4分",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "complaint_order",
+              "type": "VARCHAR_32",
+              "chnname": "被投诉量",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ]
+        },
+        {
+          "title": "as_abi_backcall_slove",
+          "chnname": "后台投诉处理能力",
+          "fields": [
+            {
+              "name": "staff_id",
+              "type": "VARCHAR_32",
+              "chnname": "员工编号",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "static_month",
+              "type": "VARCHAR_32",
+              "chnname": "统计时间",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "order_num",
+              "type": "VARCHAR_32",
+              "chnname": "填单量",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "error_order_num",
+              "type": "VARCHAR_32",
+              "chnname": "差错工单",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "order_error_rate",
+              "type": "Ratio",
+              "remark": "",
+              "chnname": "工单错单率"
+            },
+            {
+              "name": "hard_order_num",
+              "type": "DATETIME",
+              "chnname": "派单率",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "ivr_order_num",
+              "type": "VARCHAR_32",
+              "chnname": "前台填单差错量",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "recall_order_num",
+              "type": "DATETIME",
+              "chnname": "自处理率",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "customer_4point",
+              "type": "VARCHAR_32",
+              "chnname": "人工呼出次数",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "complaint_order",
+              "type": "VARCHAR_32",
+              "chnname": "回复成功次数",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "sms_notice",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "短信回复次数"
+            },
+            {
+              "name": "apply_return_num",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "申请退费次数"
+            },
+            {
+              "name": "return_fee_error",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "退费单差错次数"
+            },
+            {
+              "name": "order_overtime",
+              "type": "Double",
+              "remark": "",
+              "chnname": "工单超时量"
+            },
+            {
+              "name": "order_close_rate",
+              "type": "Ratio",
+              "remark": "",
+              "chnname": "归档及时率"
+            },
+            {
+              "name": "apply_return_fee",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "申请退费金额"
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "untitled9",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ]
+        },
+        {
+          "title": "staff_info",
+          "chnname": "员工基本信息",
+          "fields": [
+            {
+              "name": "id_4a",
+              "type": "VARCHAR_32",
+              "chnname": "4A账号",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "crm_opid",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "CRM工号"
+            },
+            {
+              "name": "cs_opid",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "客服工号"
+            },
+            {
+              "name": "staff_id",
+              "type": "VARCHAR_32",
+              "chnname": "员工编号",
+              "remark": "",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "staff_name",
+              "type": "VARCHAR_128",
+              "chnname": "员工姓名",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "company",
+              "type": "VARCHAR_128",
+              "chnname": "公司名称",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "job",
+              "type": "VARCHAR_32",
+              "chnname": "工作岗位",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "entry_time",
+              "type": "DefaultString",
+              "chnname": "入职时间",
+              "remark": "",
+              "pk": false,
+              "notNull": false,
+              "autoIncrement": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "create_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "modify_date",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "修改时间"
+            },
+            {
+              "name": "remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ]
+        }
+      ],
+      "graphCanvas": {
+        "nodes": [
+          {
+            "shape": "table",
+            "title": "as_abi_action",
+            "moduleName": false,
+            "x": 140,
+            "y": 160,
+            "id": "545f12b5"
+          },
+          {
+            "shape": "table",
+            "title": "as_abi_konw_exam",
+            "moduleName": false,
+            "x": 471.2596782183916,
+            "y": 227.42261388839523,
+            "id": "cb74ae83"
+          },
+          {
+            "shape": "table",
+            "title": "as_abi_sale",
+            "moduleName": false,
+            "x": 39.079678218391535,
+            "y": 527.3026138883953,
+            "id": "75373606"
+          },
+          {
+            "shape": "table",
+            "title": "as_abi_in_call",
+            "moduleName": false,
+            "x": 840,
+            "y": 170,
+            "id": "e23b6ca9"
+          },
+          {
+            "shape": "table",
+            "title": "staff_info",
+            "moduleName": false,
+            "x": 606.8671782183916,
+            "y": 485.4076138883953,
+            "id": "6791ce9d"
+          },
+          {
+            "shape": "table",
+            "title": "as_abi_backcall_slove",
+            "moduleName": false,
+            "x": 955.2571782183917,
+            "y": 451.23011388839524,
+            "id": "a77b0bf4"
+          }
+        ],
+        "edges": []
+      },
+      "associations": []
+    }
+  ],
+  "dataTypeDomains": {
+    "datatype": [
+      {
+        "name": "默认字串",
+        "code": "DefaultString",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(32)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(32)"
+          },
+          "SQLServer": {
+            "type": "NVARCHAR(32)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(32)"
+          }
+        }
+      },
+      {
+        "name": "标识号",
+        "code": "IdOrKey",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "ORACLE": {
+            "type": "VARCHAR2(32)"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(32)"
+          },
+          "SQLServer": {
+            "type": "VARCHAR(32)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(32)"
+          }
+        }
+      },
+      {
+        "name": "标识号-长",
+        "code": "LongKey",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(64)"
+          },
+          "ORACLE": {
+            "type": "VARCHAR2(64)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "SQLServer": {
+            "type": "VARCHAR(64)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(64)"
+          }
+        }
+      },
+      {
+        "name": "名称",
+        "code": "Name",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(128)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(128)"
+          },
+          "SQLServer": {
+            "type": "NVARCHAR(128)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(128)"
+          }
+        }
+      },
+      {
+        "name": "备注说明",
+        "code": "Intro",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(512)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(512)"
+          },
+          "SQLServer": {
+            "type": "NVARCHAR(512)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(512)"
+          }
+        }
+      },
+      {
+        "name": "字串-短",
+        "code": "ShortString",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(128)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(128)"
+          },
+          "SQLServer": {
+            "type": "NVARCHAR(128)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(128)"
+          }
+        }
+      },
+      {
+        "name": "字串-中",
+        "code": "MiddleString",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(1024)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(1024)"
+          },
+          "SQLServer": {
+            "type": "NVARCHAR(1024)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(1024)"
+          }
+        }
+      },
+      {
+        "name": "字串-长",
+        "code": "LongString",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(3072)"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(3072)"
+          },
+          "SQLServer": {
+            "type": "NVARCHAR(3072)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(3072)"
+          }
+        }
+      },
+      {
+        "name": "大文本",
+        "code": "LongText",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "MYSQL": {
+            "type": "TEXT"
+          },
+          "ORACLE": {
+            "type": "CLOB"
+          },
+          "SQLServer": {
+            "type": "NTEXT"
+          },
+          "PostgreSQL": {
+            "type": "TEXT"
+          }
+        }
+      },
+      {
+        "name": "小数",
+        "code": "Double",
+        "apply": {
+          "JAVA": {
+            "type": "Double"
+          },
+          "MYSQL": {
+            "type": "DECIMAL(32,10)"
+          },
+          "ORACLE": {
+            "type": "NUMBER(32,10)"
+          },
+          "SQLServer": {
+            "type": "DECIMAL(32,10)"
+          },
+          "PostgreSQL": {
+            "type": "DECIMAL(32,10)"
+          }
+        }
+      },
+      {
+        "name": "比例",
+        "code": "Ratio",
+        "apply": {
+          "MYSQL": {
+            "type": "DECIMAL(4,2)"
+          },
+          "JAVA": {
+            "type": "Double"
+          },
+          "ORACLE": {
+            "type": "NUMBER(4,2)"
+          },
+          "SQLServer": {
+            "type": "DECIMAL(4,2)"
+          },
+          "PostgreSQL": {
+            "type": "DECIMAL(4,2)"
+          }
+        }
+      },
+      {
+        "name": "整数",
+        "code": "Integer",
+        "apply": {
+          "JAVA": {
+            "type": "Integer"
+          },
+          "MYSQL": {
+            "type": "INT"
+          },
+          "ORACLE": {
+            "type": "INT"
+          },
+          "SQLServer": {
+            "type": "INT"
+          },
+          "PostgreSQL": {
+            "type": "INT"
+          }
+        }
+      },
+      {
+        "name": "大整数",
+        "code": "BigInt",
+        "apply": {
+          "MYSQL": {
+            "type": "BIGINT"
+          },
+          "JAVA": {
+            "type": "Long"
+          },
+          "ORACLE": {
+            "type": "NUMBER"
+          },
+          "SQLServer": {
+            "type": "BIGINT"
+          },
+          "PostgreSQL": {
+            "type": "BIGINT"
+          }
+        }
+      },
+      {
+        "name": "金额",
+        "code": "Money",
+        "apply": {
+          "JAVA": {
+            "type": "Double"
+          },
+          "MYSQL": {
+            "type": "DECIMAL(32,8)"
+          },
+          "ORACLE": {
+            "type": "NUMBER(32,8)"
+          },
+          "SQLServer": {
+            "type": "DECIMAL(32,8)"
+          },
+          "PostgreSQL": {
+            "type": "DECIMAL(32,8)"
+          }
+        }
+      },
+      {
+        "name": "是否",
+        "code": "YesNo",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(1)"
+          },
+          "ORACLE": {
+            "type": "VARCHAR2(1)"
+          },
+          "SQLServer": {
+            "type": "VARCHAR(1)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(1)"
+          }
+        }
+      },
+      {
+        "name": "数据字典",
+        "code": "Dict",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(32)"
+          },
+          "ORACLE": {
+            "type": "VARCHAR2(32)"
+          },
+          "SQLServer": {
+            "type": "VARCHAR(32)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(32)"
+          }
+        }
+      },
+      {
+        "name": "日期",
+        "code": "Date",
+        "apply": {
+          "JAVA": {
+            "type": "Date"
+          },
+          "MYSQL": {
+            "type": "DATE"
+          },
+          "ORACLE": {
+            "type": "DATE"
+          },
+          "SQLServer": {
+            "type": "DATE"
+          },
+          "PostgreSQL": {
+            "type": "DATE"
+          }
+        }
+      },
+      {
+        "name": "日期时间",
+        "code": "DateTime",
+        "apply": {
+          "JAVA": {
+            "type": "Date"
+          },
+          "MYSQL": {
+            "type": "DATETIME"
+          },
+          "ORACLE": {
+            "type": "DATE"
+          },
+          "SQLServer": {
+            "type": "DATE"
+          },
+          "PostgreSQL": {
+            "type": "DATETIME"
+          }
+        }
+      },
+      {
+        "name": "单字符",
+        "code": "Char",
+        "apply": {
+          "MYSQL": {
+            "type": "CHAR(1)"
+          },
+          "ORACLE": {
+            "type": "CHAR(1)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "SQLServer": {
+            "type": "CHAR(1)"
+          },
+          "PostgreSQL": {
+            "type": "CHAR(1)"
+          }
+        }
+      },
+      {
+        "name": "DATE",
+        "code": "DATE",
+        "apply": {
+          "MYSQL": {
+            "type": "DATE"
+          }
+        }
+      },
+      {
+        "name": "DATETIME",
+        "code": "DATETIME",
+        "apply": {
+          "MYSQL": {
+            "type": "DATETIME"
+          }
+        }
+      },
+      {
+        "name": "DECIMAL_32_10",
+        "code": "DECIMAL_32_10",
+        "apply": {
+          "MYSQL": {
+            "type": "DECIMAL(32,10)"
+          }
+        }
+      },
+      {
+        "name": "INT_10",
+        "code": "INT_10",
+        "apply": {
+          "MYSQL": {
+            "type": "INT(10)"
+          }
+        }
+      },
+      {
+        "name": "VARCHAR_128",
+        "code": "VARCHAR_128",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(128)"
+          }
+        }
+      },
+      {
+        "name": "VARCHAR_32",
+        "code": "VARCHAR_32",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(32)"
+          }
+        }
+      }
+    ],
+    "database": [
+      {
+        "code": "MYSQL",
+        "template": "DROP TABLE {{=it.entity.title}};\n$blankline\nCREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.pk ? 'NOT NULL' : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,';')}}' {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n) COMMENT = '{{=it.func.join(it.entity.chnname,it.entity.remark,';') }}'",
+        "fileShow": true,
+        "defaultDatabase": true,
+        "createTableTemplate": "CREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.notNull ? 'NOT NULL' : '' }} {{= field.autoIncrement ? 'AUTO_INCREMENT' : '' }} {{= field.defaultValue ? it.func.join('DEFAULT',field.defaultValue,' ') : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,' ')}}' {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n) COMMENT = '{{=it.func.join(it.entity.chnname,it.entity.remark,' ') }}';{{=it.separator}}",
+        "deleteTableTemplate": "DROP TABLE {{=it.entity.title}};{{=it.separator}}/*SkipError*/",
+        "rebuildTableTemplate": "create table PDMAN_UP_{{=it.oldEntity.title}}\nas select * from {{=it.oldEntity.title}};{{=it.separator}}\n$blankline\n\ndrop table {{=it.oldEntity.title}};{{=it.separator}}\n$blankline\n\nCREATE TABLE {{=it.newEntity.title}}(\n{{ pkList = [] ; }}\n{{~it.newEntity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.notNull ? 'NOT NULL' : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,';')}}' {{= index < it.newEntity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n) COMMENT = '{{=it.func.join(it.newEntity.chnname,it.newEntity.remark,';') }}';{{=it.separator}}\n$blankline\n\n{{ sameCols = it.func.intersect(it.newEntity.fields,it.oldEntity.fields) ;}}\ninsert into {{=it.newEntity.title}}(\n{{~sameCols:field:index}}\n    {{=field.name}}{{? index<sameCols.length-1}},{{?}}\n{{~}}\n) \nselect \n{{~sameCols:field:index}}\n    {{=field.name}}{{? index<sameCols.length-1}},{{?}}\n{{~}}\nfrom PDMAN_UP_{{=it.oldEntity.title}};{{=it.separator}}\n$blankline\n\ndrop table PDMAN_UP_{{=it.oldEntity.title}};{{=it.separator}}\n$blankline\n{{~it.newEntity.indexs:index}}\nALTER TABLE {{=it.newEntity.title}} ADD {{? index.isUnique}}UNIQUE{{?}} {{=index.name}}({{=it.func.join(...index.fields,',')}});{{=it.separator}}\n{{~}}",
+        "createFieldTemplate": "ALTER TABLE {{=it.entity.title}} ADD COLUMN {{=it.field.name}} {{=it.field.type}} {{? it.field.notNull}}NOT NULL{{?}} {{? ''!=it.field.defaultValue}}DEFAULT {{? null==it.field.defaultValue}}NULL{{??}}'{{=it.field.defaultValue}}'{{?}}{{?}} {{? it.field.autoIncrement}}AUTO_INCREMENT{{?}} {{? it.field.pk}}PRIMARY KEY{{?}} {{? it.field.chnname}}COMMENT '{{=it.field.chnname}}'{{?}} {{? it.field.addAfter}}AFTER {{=it.field.addAfter}}{{?}};{{=it.separator}}",
+        "updateFieldTemplate": "ALTER TABLE {{=it.entity.title}} MODIFY COLUMN {{=it.field.name}} {{=it.field.type}} {{? it.field.notNull}}NOT NULL{{?}} {{? ''!=it.field.defaultValue}}DEFAULT {{? null==it.field.defaultValue}}NULL{{??}}'{{=it.field.defaultValue}}'{{?}}{{?}} {{? it.field.autoIncrement}}AUTO_INCREMENT{{?}} {{? it.field.chnname}}COMMENT '{{=it.field.chnname}}'{{?}};{{=it.separator}}",
+        "deleteFieldTemplate": "ALTER TABLE {{=it.entity.title}} DROP {{=it.field.name}};{{=it.separator}}",
+        "deleteIndexTemplate": "ALTER TABLE {{=it.entity.title}} DROP INDEX {{=it.index.name}};{{=it.separator}}",
+        "createIndexTemplate": "ALTER TABLE {{=it.entity.title}} ADD {{? it.index.isUnique}}UNIQUE{{??}}INDEX{{?}} {{=it.index.name}}({{=it.func.join(...it.index.fields,',')}});{{=it.separator}}",
+        "updateTableComment": "ALTER TABLE {{=it.entity.title}} COMMENT '{{=it.entity.chnname}}';{{=it.separator}}"
+      },
+      {
+        "code": "ORACLE",
+        "template": "DROP TABLE {{=it.entity.title}};{{=it.separator}}\n$blankline\nCREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}}  {{= field.pk ? 'NOT NULL' : '' }} {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);{{=it.separator}}\n$blankline\nCOMMENT ON TABLE {{=it.entity.title}} IS '{{=it.func.join(it.entity.chnname,it.entity.remark,';') }}';{{=it.separator}}\n{{~it.entity.fields:field:index}}\nCOMMENT ON COLUMN {{=it.entity.title}}.{{=field.name}} IS '{{=it.func.join(field.chnname,field.remark,';')}}';{{=it.separator}}\n{{~}}",
+        "createTableTemplate": "CREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}}{{? field.defaultValue}} DEFAULT {{=field.defaultValue}}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);{{=it.separator}}\n$blankline\n{{? it.entity.chnname || it.entity.remark}}COMMENT ON TABLE {{=it.entity.title}} IS {{? it.entity.remark}}'{{=it.entity.remark}}'{{??}}'{{=it.entity.chnname}}'{{?}};{{=it.separator}}{{?}}\n{{~it.entity.fields:field:index}}\n{{? field.chnname || field.remark}}COMMENT ON COLUMN {{=it.entity.title}}.{{=field.name}} IS {{? field.remark}}'{{=field.remark}}'{{??}}'{{=field.chnname}}'{{?}};{{=it.separator}}{{?}}\n{{~}}",
+        "deleteTableTemplate": "DROP TABLE {{=it.entity.title}};{{=it.separator}}/*SkipError*/\r\n$blankline",
+        "rebuildTableTemplate": "CREATE TABLE PDMAN_UP_{{=it.oldEntity.title}}\nAS SELECT * FROM {{=it.oldEntity.title}};{{=it.separator}}\n$blankline\nDROP TABLE {{=it.oldEntity.title}};{{=it.separator}}\n$blankline\nCREATE TABLE {{=it.newEntity.title}}(\n{{ pkList = [] ; }}{{~it.newEntity.fields:field:index}}{{? field.pk }}{{ pkList.push(field.name) }}{{?}}    {{=field.name}} {{=field.type}}{{? field.defaultValue}} DEFAULT {{=field.defaultValue}}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= index < it.newEntity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}{{? pkList.length >0 }}    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}}){{?}}\n);{{=it.separator}}\n$blankline\n{{? it.newEntity.chnname || it.newEntity.remark}}COMMENT ON TABLE {{=it.newEntity.title}} IS {{? it.newEntity.remark}}'{{=it.entity.remark}}'{{??}}'{{=it.newEntity.chnname}}'{{?}};{{?}}{{=it.separator}}\n{{~it.newEntity.fields:field:index}}\n{{? field.chnname || field.remark}}COMMENT ON COLUMN {{=it.newEntity.title}}.{{=field.name}} IS {{? field.remark}}'{{=field.remark}}'{{??}}'{{=field.chnname}}'{{?}};{{?}}{{=it.separator}}\n{{~}}\n{{ sameCols = it.func.intersect(it.newEntity.fields,it.oldEntity.fields) ;}}\n$blankline\nINSERT INTO {{=it.newEntity.title}}(\n{{~sameCols:field:index}}   {{=field.name}}{{? index<sameCols.length-1}},{{?}}\n{{~}}) \nSELECT\n{{~sameCols:field:index}}   {{=field.name}}{{? index<sameCols.length-1}},{{?}}\n{{~}}FROM PDMAN_UP_{{=it.oldEntity.title}};{{=it.separator}}\n\nDROP TABLE PDMAN_UP_{{=it.oldEntity.title}};{{=it.separator}}\n{{~it.newEntity.indexs:index}}\nCREATE{{? index.isUnique}} UNIQUE{{?}} INDEX {{=index.name}} ON {{=it.newEntity.title}}({{=it.func.join(index.fields,',')}});{{=it.separator}}\n{{~}}",
+        "createFieldTemplate": "ALTER TABLE {{=it.entity.title}} ADD({{=it.field.name}} {{=it.field.type}}{{? it.field.defaultValue}} DEFAULT {{=it.field.defaultValue}}{{?}}{{? it.field.notNull}} NOT NULL{{?}});{{=it.separator}}\r\n{{? it.field.chnname || it.field.remark}}COMMENT ON COLUMN {{=it.entity.title}}.{{=it.field.name}} IS {{? it.field.remark}}'{{=it.field.remark}}'{{??}}'{{=it.field.chnname}}'{{?}};{{=it.separator}}{{?}}\r\n$blankline",
+        "updateFieldTemplate": "ALTER TABLE {{=it.entity.title}} MODIFY({{=it.field.name}} {{=it.field.type}}{{? it.field.defaultValue}} DEFAULT {{=it.field.defaultValue}}{{?}}{{? it.field.notNull}} NOT NULL{{?}});{{=it.separator}}\r\n{{? it.field.chnname || it.field.remark}}COMMENT ON COLUMN {{=it.entity.title}}.{{=it.field.name}} IS {{? it.field.remark}}'{{=it.field.remark}}'{{??}}'{{=it.field.chnname}}'{{?}};{{=it.separator}}{{=it.separator}}{{?}}\r\n$blankline",
+        "deleteFieldTemplate": "ALTER TABLE {{=it.entity.title}} DROP({{=it.field.name}});{{=it.separator}}\r\n$blankline",
+        "deleteIndexTemplate": "DROP INDEX {{=it.entity.title}}.{{=it.index.name}};{{=it.separator}}\r\n$blankline",
+        "createIndexTemplate": "CREATE{{? it.index.isUnique}} UNIQUE{{?}} INDEX {{=it.index.name}} ON {{=it.entity.title}}({{=it.func.join(it.index.fields,',')}});{{=it.separator}}\r\n$blankline",
+        "updateTableComment": "{{? it.entity.chnname || it.entity.remark}}COMMENT ON TABLE {{=it.entity.title}} IS {{? it.entity.remark}}'{{=it.entity.remark}}'{{??}}'{{=it.entity.chnname}}'{{?}};{{=it.separator}}{{?}}\r\n$blankline"
+      },
+      {
+        "code": "SQLServer",
+        "createTableTemplate": "CREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.notNull ? 'NOT NULL' : '' }} {{= field.autoIncrement ? 'INDENTITY(1,1)' : '' }} {{= field.defaultValue ? it.func.join('DEFAULT',field.defaultValue,' ') : '' }}  {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    CONSTRAINT PK_{{=it.entity.title}} PRIMARY KEY CLUSTERED ({{~pkList:pkName:i}}{{= pkName }} ASC {{= i<pkList.length-1 ? ',' : '' }}{{~}}) ON [PRIMARY] \n{{?}}\n) ;{{=it.separator}}\n\n$blankline\n--{{? it.entity.chnname || it.entity.remark}}COMMENT ON TABLE {{=it.entity.title}} IS {{? it.entity.remark}}'{{=it.entity.remark}}'{{??}}'{{=it.entity.chnname}}'{{?}};{{?}}\n{{~it.entity.fields:field:index}}\n{{? field.chnname || field.remark}}COMMENT ON COLUMN {{=it.entity.title}}.{{=field.name}} IS {{? field.remark}}'{{=field.remark}}'{{??}}'{{=field.chnname}}'{{?}};{{=it.separator}}{{?}}\n{{~}}\n",
+        "deleteTableTemplate": "",
+        "rebuildTableTemplate": "",
+        "createFieldTemplate": "",
+        "updateFieldTemplate": "",
+        "deleteFieldTemplate": "",
+        "deleteIndexTemplate": "",
+        "createIndexTemplate": "",
+        "updateTableComment": ""
+      },
+      {
+        "code": "PostgreSQL",
+        "template": "DROP TABLE {{=it.entity.title}};\n$blankline\nCREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.pk ? 'NOT NULL' : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,';')}}' {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n) COMMENT = '{{=it.func.join(it.entity.chnname,it.entity.remark,';') }}'",
+        "createTableTemplate": "CREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.notNull ? 'NOT NULL' : '' }} {{= field.autoIncrement ? 'AUTO_INCREMENT' : '' }} {{= field.defaultValue ? it.func.join('DEFAULT',field.defaultValue,' ') : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,' ')}}' {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n) COMMENT = '{{=it.func.join(it.entity.chnname,it.entity.remark,' ') }}';",
+        "deleteTableTemplate": "DROP TABLE {{=it.entity.title}};/*SkipError*/",
+        "rebuildTableTemplate": "create table PDMAN_UP_{{=it.oldEntity.title}}\nas select * from {{=it.oldEntity.title}};{{=it.separator}}\n$blankline\n\ndrop table {{=it.oldEntity.title}};{{=it.separator}}\n$blankline\n\nCREATE TABLE {{=it.newEntity.title}}(\n{{ pkList = [] ; }}\n{{~it.newEntity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.notNull ? 'NOT NULL' : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,';')}}' {{= index < it.newEntity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n) COMMENT = '{{=it.func.join(it.newEntity.chnname,it.newEntity.remark,';') }}';{{=it.separator}}\n$blankline\n\n{{ sameCols = it.func.intersect(it.newEntity.fields,it.newEntity.fields) ;}}\ninsert into {{=it.newEntity.title}}(\n{{~sameCols:field:index}}\n    {{=field.name}}{{? index<it.newEntity.fields.length-1}},{{?}}\n{{~}}\n) \nvalues\nselect \n{{~sameCols:field:index}}\n    {{=field.name}}{{? index<it.oldEntity.fields.length-1}},{{?}}\n{{~}}\nfrom PDMAN_UP_{{=it.oldEntity.title}};{{=it.separator}}\n$blankline\n\ndrop table PDMAN_UP_{{=it.oldEntity.title}};{{=it.separator}}\n$blankline\n{{~it.newEntity.indexs:index}}\nALTER TABLE {{=it.newEntity.title}} ADD {{? index.isUnique}}UNIQUE{{?}} {{=index.name}}({{=it.func.join(...index.fields,',')}});{{=it.separator}}\n{{~}}",
+        "createFieldTemplate": "ALTER TABLE {{=it.entity.title}} ADD COLUMN {{=it.field.name}} {{=it.field.type}} {{? it.field.notNull}}NOT NULL{{?}} {{? ''!=it.field.defaultValue}}DEFAULT {{? null==it.field.defaultValue}}NULL{{??}}'{{=it.field.defaultValue}}'{{?}}{{?}} {{? it.field.autoIncrement}}AUTO_INCREMENT{{?}} {{? it.field.pk}}PRIMARY KEY{{?}} {{? it.field.chnname}}COMMENT '{{=it.field.chnname}}'{{?}} {{? it.field.addAfter}}AFTER {{=it.field.addAfter}}{{?}};",
+        "updateFieldTemplate": "ALTER TABLE {{=it.entity.title}} MODIFY COLUMN {{=it.field.name}} {{=it.field.type}} {{? it.field.notNull}}NOT NULL{{?}} {{? ''!=it.field.defaultValue}}DEFAULT {{? null==it.field.defaultValue}}NULL{{??}}'{{=it.field.defaultValue}}'{{?}}{{?}} {{? it.field.autoIncrement}}AUTO_INCREMENT{{?}} {{? it.field.chnname}}COMMENT '{{=it.field.chnname}}'{{?}};",
+        "deleteFieldTemplate": "ALTER TABLE {{=it.entity.title}} DROP {{=it.field.name}};",
+        "deleteIndexTemplate": "ALTER TABLE {{=it.entity.title}} DROP INDEX {{=it.index.name}};",
+        "createIndexTemplate": "ALTER TABLE {{=it.entity.title}} ADD {{? it.index.isUnique}}UNIQUE{{?}} {{=it.index.name}}({{=it.func.join(...it.index.fields,',')}});",
+        "updateTableComment": "ALTER TABLE {{=it.entity.title}} COMMENT '{{=it.entity.chnname}}';"
+      },
+      {
+        "code": "JAVA",
+        "template": "package group.rober.pdman.{{=it.module.name}}.entity;\n$blankline\nimport javax.persistence.*;\nimport java.io.Serializable;\nimport java.util.Date;\n$blankline\n$blankline\n\n/** {{=it.entity.chnname}} */\n@Table(name=\"{{=it.entity.title}}\")\npublic class {{=it.func.camel(it.entity.title,true) }} implements Serializable,Cloneable{\n{{~it.entity.fields:field:index}}\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    {{? field.pk }}\n    @Id\n    @GeneratedValue\n    {{?}}\n    private {{=field.type}} {{=it.func.camel(field.name,false)}} ;\n{{~}}\n$blankline\n{{~it.entity.fields:field:index}}\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    public {{=field.type}} get{{=it.func.camel(field.name,true)}}(){\n        return this.{{=it.func.camel(field.name,false)}};\n    }\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    public void set{{=it.func.camel(field.name,true)}}({{=field.type}} {{= it.func.camel(field.name,false) }}){\n        this.{{=it.func.camel(field.name,false)}} = {{= it.func.camel(field.name,false) }};\n    }\n{{~}}\n}",
+        "createTableTemplate": "package group.rober.pdman.{{=it.module.name}}.entity;\n$blankline\nimport javax.persistence.*;\nimport java.io.Serializable;\nimport java.util.Date;\n$blankline\n$blankline\n@Table(name=\"{{=it.entity.title}}\")\npublic class {{=it.func.camel(it.entity.title,true) }} implements Serializable,Cloneable{\n{{~it.entity.fields:field:index}}\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    {{? field.pk }}\n    @Id\n    @GeneratedValue\n    {{?}}\n    private {{=field.type}} {{=it.func.camel(field.name,false)}} ;\n{{~}}\n$blankline\n{{~it.entity.fields:field:index}}\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    public {{=field.type}} get{{=it.func.camel(field.name,true)}}(){\n        return this.{{=it.func.camel(field.name,false)}};\n    }\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    public void set{{=it.func.camel(field.name,true)}}({{=field.type}} {{= it.func.camel(field.name,false) }}){\n        this.{{=it.func.camel(field.name,false)}} = {{= it.func.camel(field.name,false) }};\n    }\n{{~}}\n}",
+        "deleteTableTemplate": "",
+        "rebuildTableTemplate": "",
+        "createFieldTemplate": "",
+        "updateFieldTemplate": "",
+        "deleteFieldTemplate": "",
+        "deleteIndexTemplate": "",
+        "createIndexTemplate": "",
+        "updateTableComment": ""
+      }
+    ]
+  },
+  "profile": {
+    "defaultFields": [],
+    "defaultFieldsType": "1",
+    "javaConfig": {
+      "JAVA_HOME": "D:\\Java\\jdk1.8.0_171\\jre"
+    },
+    "sqlConfig": "/*SQL@Run*/",
+    "dbs": [
+      {
+        "name": "10.196.120.111",
+        "defaultDB": false,
+        "properties": {
+          "driver_class_name": "com.mysql.jdbc.Driver",
+          "url": "jdbc:mysql://127.0.0.1:3306/smart?characterEncoding=UTF-8&useSSL=false&useUnicode=true&serverTimezone=GMT",
+          "username": "root",
+          "password": "valen"
+        }
+      },
+      {
+        "name": "120.77.153.51",
+        "defaultDB": true,
+        "properties": {
+          "driver_class_name": "com.mysql.jdbc.Driver",
+          "url": "jdbc:mysql://120.77.153.51:3306/mmp_gz?characterEncoding=UTF-8&useSSL=false&useUnicode=true&serverTimezone=GMT",
+          "username": "root",
+          "password": "new password"
+        }
+      }
+    ],
+    "wordTemplateConfig": ""
+  }
+}
